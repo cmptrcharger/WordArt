@@ -6,37 +6,61 @@ public class Letters {
     public static HashMap<Character, Boolean[][]> letters = new HashMap<>();
     public static Boolean[][] toArray(char c){
         init();
-        return new Boolean[2][5];
+        return (letters.get(Character.toUpperCase(c)));
     }
-    public static void init(){
-        letters.put('A', new Boolean[][]{{false, true, false}, {true, false, true,},{true, true,true},{true, false, true},{true, false, true}});
-        letters.put('B', new Boolean[][]{{true, true, false}, {true, false, true,},{true, true,false},{true, false, true},{true, true, false}});
-        letters.put('C', new Boolean[][]{{false, true, true}, {true, false, false,},{true, false,false},{true, false, false},{false, true, true}});
-        letters.put('D', new Boolean[][]{{true, true, false}, {true, false, true,},{true, false,true},{true, false, true},{true, true, false}});
-        letters.put('E', new Boolean[][]{{true, true, true}, {true, false, false,},{true, true,true},{true, false, false},{true, true, true}});
-        letters.put('F', new Boolean[][]{{true, true, true}, {true, false, false,},{true, true,true},{true, false, false},{true, false, false}});
-        letters.put('G', new Boolean[][]{{false, true, true, false}, {true, false, false,false},{true,false,true,true},{true, false,false, true},{false, true, true, false}});
-        letters.put('H', new Boolean[][]{{true, false, true}, {true, false, true,},{true, true,true},{true, false, true},{true, false, true}});
-        letters.put('I', new Boolean[][]{{true, true, true}, {false, true, false,},{false, true,false},{false, true, false},{true, true, true}});
-        letters.put('J', new Boolean[][]{{false, false, true}, {false, false, true,},{false, true,true},{true, false, true},{false, true, false}});
-        letters.put('K', new Boolean[][]{{true, false, true}, {true, false, true,},{true, true,false},{true, false, true},{true, false, true}});
-        letters.put('L', new Boolean[][]{{true, false, false}, {true, false, false,},{true, false,false},{true, false, false},{true, true, true}});
-        letters.put('M', new Boolean[][]{{true, false,false,false, true}, {true, true, false,true,true,},{true,false, true,false,true},{true, false,false,false, true},{true, false,false,false, true}});
-        letters.put('N', new Boolean[][]{{true, true, true}, {true, true, true,},{true, true,true},{true, true, true},{true, true, true}});
-        letters.put('O', new Boolean[][]{{true, true, true}, {true, true, true,},{true, true,true},{true, true, true},{true, true, true}});
-        letters.put('P', new Boolean[][]{{true, true, true}, {true, true, true,},{true, true,true},{true, true, true},{true, true, true}});
-        letters.put('Q', new Boolean[][]{{true, true, true}, {true, true, true,},{true, true,true},{true, true, true},{true, true, true}});
-        letters.put('R', new Boolean[][]{{true, true, true}, {true, true, true,},{true, true,true},{true, true, true},{true, true, true}});
-        letters.put('S', new Boolean[][]{{true, true, true}, {true, true, true,},{true, true,true},{true, true, true},{true, true, true}});
-        letters.put('T', new Boolean[][]{{true, true, true}, {true, true, true,},{true, true,true},{true, true, true},{true, true, true}});
-        letters.put('U', new Boolean[][]{{true, true, true}, {true, true, true,},{true, true,true},{true, true, true},{true, true, true}});
-        letters.put('V', new Boolean[][]{{true, true, true}, {true, true, true,},{true, true,true},{true, true, true},{true, true, true}});
-        letters.put('W', new Boolean[][]{{true, true, true}, {true, true, true,},{true, true,true},{true, true, true},{true, true, true}});
-        letters.put('X', new Boolean[][]{{true, true, true}, {true, true, true,},{true, true,true},{true, true, true},{true, true, true}});
-        letters.put('Y', new Boolean[][]{{true, true, true}, {true, true, true,},{true, true,true},{true, true, true},{true, true, true}});
-        letters.put('Z', new Boolean[][]{{true, true, true}, {true, true, true,},{true, true,true},{true, true, true},{true, true, true}});
-        //for future characters
-        //letters.put('A', new Boolean[][]{{true, true, true}, {true, true, true,},{true, true,true},{true, true, true},{true, true, true}});
-
+    public static void init() {
+        letters.put('A', toBooleanArray(new String[]{
+                ".xx.",
+                "x..x",
+                "xxxx",
+                "x..x",
+                "x..x"
+        }));
+        letters.put('B', toBooleanArray(new String[]{
+                "xxx.",
+                "x..x",
+                "xxx.",
+                "x..x",
+                "xxx."
+        }));
+        letters.put('C', toBooleanArray(new String[]{
+                ".xxx",
+                "x...",
+                "x...",
+                "x...",
+                ".xxx"
+        }));
+        letters.put('D', toBooleanArray(new String[]{
+                "xxx.",
+                "x..x",
+                "x..x",
+                "x..x",
+                "xxx."
+        }));
+        letters.put('E', toBooleanArray(new String[]{
+                "xxxx",
+                "x...",
+                "xxxx",
+                "x...",
+                "xxxx"
+        }));
+        letters.put('F', toBooleanArray(new String[]{
+                "xxxx",
+                "x...",
+                "xxxx",
+                "x...",
+                "x..."
+        }));
+    }
+    public static Boolean[][] toBooleanArray (String[] strings) {
+        Boolean[][] endvalue = new Boolean[strings.length][strings[0].length()];
+        for (int i = 0; i < strings.length; i++) {
+            String str = strings[i];
+            for (int j = 0; j < str.length(); j++) {
+                if(str.charAt(j)=='x') {endvalue[i][j] = true;}
+                else{endvalue[i][j] = false;}
+            }
+        }
+        return endvalue;
     }
 }
