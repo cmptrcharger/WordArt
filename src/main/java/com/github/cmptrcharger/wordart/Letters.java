@@ -224,6 +224,7 @@ public class Letters {
                 ".x",
                 "x."
         }));
+
         letters.put('?', toBooleanArray(new String[]{
                 ".xx.",
                 "x..x",
@@ -252,6 +253,7 @@ public class Letters {
                 "..x.x",
                 "xxxx."
         }));
+
     }
     public static Boolean[][] toBooleanArray (String[] strings) {
         Boolean[][] returnValue = new Boolean[strings.length][strings[0].length()];
