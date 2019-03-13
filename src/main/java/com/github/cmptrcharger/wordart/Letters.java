@@ -224,11 +224,7 @@ public class Letters {
                 ".x",
                 "x."
         }));
-        letters.put('?', toBooleanArray(new String[]{
-                ".x.",
-                "x.x",
-                ".."
-        }));
+
     }
     public static Boolean[][] toBooleanArray (String[] strings) {
         Boolean[][] returnValue = new Boolean[strings.length][strings[0].length()];
