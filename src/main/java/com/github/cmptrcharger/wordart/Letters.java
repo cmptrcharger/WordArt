@@ -225,9 +225,32 @@ public class Letters {
                 "x."
         }));
         letters.put('?', toBooleanArray(new String[]{
-                ".x.",
-                "x.x",
-                ".."
+                ".xx.",
+                "x..x",
+                "..x.",
+                "....",
+                "..x."
+        }));
+        letters.put('!', toBooleanArray(new String[]{
+                "x",
+                "x",
+                "x",
+                ".",
+                "x",
+        }));
+        letters.put('#', toBooleanArray(new String[]{
+                ".x.x.",
+                "xxxxx",
+                ".x.x.",
+                "xxxxx",
+                ".x.x."
+        }));
+        letters.put('$', toBooleanArray(new String[]{
+                ".xxxx",
+                "x.x..",
+                "xxxxx",
+                "..x.x",
+                "xxxx."
         }));
     }
     public static Boolean[][] toBooleanArray (String[] strings) {
