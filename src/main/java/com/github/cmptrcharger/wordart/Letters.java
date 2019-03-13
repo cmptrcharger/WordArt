@@ -10,6 +10,7 @@ public class Letters {
     }
     public static void init() {
         letters.put('A', toBooleanArray(new String[]{
+                //A
                 ".xx.",
                 "x..x",
                 "xxxx",
@@ -17,6 +18,7 @@ public class Letters {
                 "x..x"
         }));
         letters.put('B', toBooleanArray(new String[]{
+                //B
                 "xxx.",
                 "x..x",
                 "xxx.",
@@ -24,6 +26,7 @@ public class Letters {
                 "xxx."
         }));
         letters.put('C', toBooleanArray(new String[]{
+                //C
                 ".xxx",
                 "x...",
                 "x...",
@@ -31,6 +34,7 @@ public class Letters {
                 ".xxx"
         }));
         letters.put('D', toBooleanArray(new String[]{
+                //D
                 "xxx.",
                 "x..x",
                 "x..x",
@@ -38,6 +42,7 @@ public class Letters {
                 "xxx."
         }));
         letters.put('E', toBooleanArray(new String[]{
+                //E
                 "xxxx",
                 "x...",
                 "xxxx",
@@ -45,6 +50,7 @@ public class Letters {
                 "xxxx"
         }));
         letters.put('F', toBooleanArray(new String[]{
+                //F
                 "xxxx",
                 "x...",
                 "xxxx",
@@ -52,6 +58,7 @@ public class Letters {
                 "x..."
         }));
         letters.put('G', toBooleanArray(new String[]{
+                //G
                 ".xxx",
                 "x...",
                 "x.xx",
@@ -59,6 +66,7 @@ public class Letters {
                 ".xxx"
         }));
         letters.put('H', toBooleanArray(new String[]{
+                //H
                 "x..x",
                 "x..x",
                 "xxxx",
@@ -66,6 +74,7 @@ public class Letters {
                 "x..x"
         }));
         letters.put('I', toBooleanArray(new String[]{
+                //I
                 "xxx",
                 ".x.",
                 ".x.",
@@ -73,6 +82,7 @@ public class Letters {
                 "xxx"
         }));
         letters.put('J', toBooleanArray(new String[]{
+                //J
                 "xxxx",
                 "..x.",
                 "x.x.",
@@ -80,6 +90,7 @@ public class Letters {
                 "xxx."
         }));
         letters.put('K', toBooleanArray(new String[]{
+                //K
                 "x..x",
                 "x.x.",
                 "xx..",
@@ -197,6 +208,26 @@ public class Letters {
                 "....",
                 "....",
                 "...."
+        }));
+        letters.put('.', toBooleanArray(new String[]{
+                ".",
+                ".",
+                ".",
+                ".",
+                ".",
+                "x"
+        }));
+        letters.put(',', toBooleanArray(new String[]{
+                "..",
+                "..",
+                "..",
+                ".x",
+                "x."
+        }));
+        letters.put('?', toBooleanArray(new String[]{
+                ".x.",
+                "x.x",
+                ".."
         }));
     }
     public static Boolean[][] toBooleanArray (String[] strings) {
